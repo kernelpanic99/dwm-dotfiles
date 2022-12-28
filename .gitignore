@@ -1,0 +1,11 @@
+#Binaries
+dwm/dwm
+st/st
+
+#Objects
+*.o
+
+#archives
+*.tar
+*.tar.gz
+*.zip

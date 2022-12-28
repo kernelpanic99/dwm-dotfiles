@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# vim:ft=bash
+
+current="$(cat /sys/class/power_supply/BAT1/current_now | awk '{print $1 / 1000}') mA"
+batcmd=" $(acpi -b | awk '
+function bat_status(str_status) {
+    if (str_status == "Discharging,") {
+        return ""
+    } else {
+        return ""
+    } 
+}
+
+#{print bat_status($3) " " $4 " " $5}
+{print $4}
+')  $current"
+
+datecmd=" $(date +'%D (%R)')"
+memcmd=" $(free -h | awk '$1 == "Mem:" {print $3}')"
+
+echo "[ $batcmd ] [ $memcmd ] [ $datecmd ]"
