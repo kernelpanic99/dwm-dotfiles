@@ -26,8 +26,6 @@ fi
 
 # start some nice programs
 
-export QT_STYLE_OVERRIDE=adwaita-dark
-
 if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  for f in /etc/X11/xinit/xinitrc.d/?*.sh ; do
   [ -x "$f" ] && . "$f"
@@ -46,5 +44,5 @@ copyq &
 feh --bg-scale ~/Pictures/wallpapers/everforest-walls/landscape/foggy_forest.jpg
 
 while true; do
-    dwm > /dev/null 2>&1
+    dwm > .dwm.log 2>&1
 done
