@@ -71,15 +71,15 @@ static const char *projmancmd[] = {"projman", NULL};
 static const char *brightnessicmd[] = {"brightnessctl", "s", "10%+", NULL};
 static const char *brightnessdcmd[] = {"brightnessctl", "s", "10%-", NULL};
 static const char *fmcmd[] = {"pcmanfm", NULL};
-static const char *playernextcmd[] = {"playerctl", "next", NULL};
-static const char *playerprevcmd[] = {"playerctl", "previous", NULL};
-static const char *playertogglecmd[] = {"playerctl", "play-pause", NULL};
+static const char *playernextcmd[] = {"mpc", "next", NULL};
+static const char *playerprevcmd[] = {"mpc", "prev", NULL};
+static const char *playertogglecmd[] = {"mpc", "toggle", NULL};
 static const char *roficmd[] = {"rofi", "-show", "drun", NULL};
 static const char *ytfzfcmd[] = {"ytfzf", "-Df", NULL};
 static const char *ytfzfsubscmd[] = {"ytfzf", "-Df", "-c",
                                      "youtube-subscriptions", NULL};
 static const char *newscmd[] = {"st", "-e", "newsboat", NULL};
-static const char *cmuscmd[] = {"st", "-T", "st-float", "-e", "cmus", NULL};
+static const char *cmuscmd[] = {"st", "-T", "st-float", "-e", "ncmpcpp", NULL};
 static const char *qalccmd[] = {"st", "-T", "st-float", "-e", "qalc", NULL};
 static const char *taskmanagercmd[] = {"st", "-T",   "st-float",
                                        "-e", "btop", NULL};
