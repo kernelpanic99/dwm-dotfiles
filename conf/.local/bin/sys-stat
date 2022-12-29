@@ -3,7 +3,7 @@
 # vim:ft=bash
 
 current="$(cat /sys/class/power_supply/BAT1/current_now | awk '{print $1 / 1000}') mA"
-batcmd=" $(acpi -b | awk '
+batcmd="$(acpi -b | awk '
 function bat_status(str_status) {
     if (str_status == "Discharging,") {
         return ""
@@ -16,8 +16,8 @@ function bat_status(str_status) {
 {print $4}
 ')  $current"
 
-datecmd=" $(date +'%D (%R)')"
-memcmd=" $(free -h | awk '$1 == "Mem:" {print $3}')"
+datecmd="$(date +'%D (%R)')"
+memcmd="$(free -h | awk '$1 == "Mem:" {print $3}')"
 
 curr_track=$(mpc current)
 
