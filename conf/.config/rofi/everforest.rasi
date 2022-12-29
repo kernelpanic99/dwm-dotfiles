@@ -24,7 +24,8 @@
 
 window {
     location:   center;
-    width:      720;
+    width:      1080;
+    height:     480;
 
     background-color:   @bg0;
 }
