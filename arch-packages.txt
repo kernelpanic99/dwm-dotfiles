@@ -1,0 +1,1 @@
+vim neovim tmux xorg ttf-droid mpd mpc mpv ncmpcpp gvfs udisks2 pcmanfm lxappearance gnome-themes-extra gtk3 fish rofi nm-connection-editor libqalculate firefox qutebrowser flameshot brightnessctl btop keepassxc copyq atril inkscape gimp blender pipewire{,-pulse,-alsa,-jack} wireplumber ytfzf yt-dlp fzf 
