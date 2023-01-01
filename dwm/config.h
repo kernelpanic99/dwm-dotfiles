@@ -78,7 +78,6 @@ static const char *roficmd[] = {"rofi", "-show", "drun", NULL};
 static const char *ytfzfcmd[] = {"ytfzf", "-Df", NULL};
 static const char *ytfzfsubscmd[] = {"ytfzf", "-Df", "-c",
                                      "youtube-subscriptions", NULL};
-static const char *newscmd[] = {"st", "-e", "newsboat", NULL};
 static const char *cmuscmd[] = {"st", "-T", "st-float", "-e", "ncmpcpp", NULL};
 static const char *qalccmd[] = {"st", "-T", "st-float", "-e", "qalc", NULL};
 static const char *taskmanagercmd[] = {"st", "-T",   "st-float",
