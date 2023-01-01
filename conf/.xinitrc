@@ -35,7 +35,7 @@ fi
 
 while true; do
     xsetroot -name " $(sys-stat) "
-    sleep 5
+    sleep 3
 done &
 
 dunst &
