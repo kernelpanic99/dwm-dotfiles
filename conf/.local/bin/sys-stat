@@ -19,10 +19,4 @@ function bat_status(str_status) {
 datecmd="$(date +'%D (%R)')"
 memcmd="$(free -h | awk '$1 == "Mem:" {print $3}')"
 
-curr_track=$(mpc current)
-
-if ! $?; then 
-    mpdcmd="[ ${curr_track:0:22}... ]"
-fi
-
-echo "$mpdcmd [ $batcmd ] [ $memcmd ] [ $datecmd ]"
+echo "[ $batcmd ] [ $memcmd ] [ $datecmd ]"
