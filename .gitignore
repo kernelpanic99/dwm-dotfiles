@@ -1,6 +1,6 @@
 #Binaries
-dwm/dwm
-st/st
+/dwm/dwm
+/st/st
 
 #Objects
 *.o
@@ -9,3 +9,5 @@ st/st
 *.tar
 *.tar.gz
 *.zip
+
+playlists

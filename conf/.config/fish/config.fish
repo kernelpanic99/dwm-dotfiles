@@ -8,7 +8,6 @@ if status is-interactive
     set -Ux IDE nvim
     set -Ux RANGER_LOAD_DEFAULT_RC 0
     set -Ux TERM st
-    set -Ux PAGER /usr/bin/moar
 
     # --- Aliases ---
     alias grep='grep --color=auto'
@@ -64,5 +63,12 @@ if status is-interactive
         set real_url "$(ytfzf --channel-link=$url)"
 
         echo $real_url >> ~/dots/conf/.config/ytfzf/subscriptions
+    end
+end
+
+# Start X at login
+if status is-login
+    if test -z "$DISPLAY" -a "$XDG_VTNR" = 1
+        exec startx -- -keeptty
     end
 end
