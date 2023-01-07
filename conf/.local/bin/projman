@@ -3,13 +3,13 @@
 #vim:ft=bash
 
 PROJ_DIR="$HOME/adev"
-TERM='st'
+TERM='foot'
 IDE='nvim'
 
 function list_projects() {
     for proj in $PROJ_DIR/*; do
         echo $(basename $proj)
-    done | dmenu -p 'Select project>' -l 10
+    done | fuzzel -d -p 'Select project>' -l 10
 }
 
 choice=$(list_projects)

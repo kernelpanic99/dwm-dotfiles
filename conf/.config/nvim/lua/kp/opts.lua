@@ -10,9 +10,8 @@ vim.opt.shiftround = true
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.incsearch = true
-vim.opt.scroll = 30
 vim.opt.hidden = true
 vim.opt.wrap = false
 vim.opt.termguicolors = true
 
-vim.cmd('colorscheme everforest')
+vim.cmd('colorscheme nordfox')

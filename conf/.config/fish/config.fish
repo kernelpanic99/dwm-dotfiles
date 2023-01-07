@@ -2,13 +2,12 @@
 set -x --path PATH "$PATH:$HOME/.local/bin:$HOME/.cargo/bin:$HOME/.local/share/gem/ruby/3.0.0/bin:$HOME/.local/share/fnm"
 
 if status is-interactive
-    # Commands to run in interactive sessions can go here
-    set -Ux EDITOR vim
-    set -Ux VISUAL vim
-    set -Ux IDE nvim
-    set -Ux RANGER_LOAD_DEFAULT_RC 0
-    set -Ux TERM st
+    set -x EDITOR vim
+    set -x VISUAL vim
+    set -x IDE nvim
+    set -x TERM st
 
+    # Commands to run in interactive sessions can go here
     # --- Aliases ---
     alias grep='grep --color=auto'
     alias fgrep='fgrep --color=auto'
@@ -22,8 +21,8 @@ if status is-interactive
     alias cp='cp -v'
 
     alias shcfg="$IDE ~/.config/fish/config.fish"
-    alias wmcfg="cd ~/dots/dwm/; $IDE config.h"
-    alias termcfg="cd ~/dots/st/; $IDE config.h"
+    alias wmcfg="$IDE ~/dots/conf/.config/sway/config"
+    alias termcfg="$IDE ~/dots/conf/.config/foot/foot.ini"
     alias nvcfg="cd ~/dots/conf/.config/nvim/; $IDE"
 
     set PACMAN "paru"
@@ -67,8 +66,8 @@ if status is-interactive
 end
 
 # Start X at login
-if status is-login
-    if test -z "$DISPLAY" -a "$XDG_VTNR" = 1
-        exec startx -- -keeptty
-    end
-end
+# if status is-login
+#     if test -z "$DISPLAY" -a "$XDG_VTNR" = 1
+#         exec startx -- -keeptty
+#     end
+# end

@@ -12,9 +12,7 @@ export PATH=$PATH:$HOME/.local/bin:$HOME/.cargo/bin:$HOME/.local/share/gem/ruby/
 export EDITOR=vim
 export VISUAL=vim
 export IDE=nvim
-export RANGER_LOAD_DEFAULT_RC=0
 export TERM=st
-export PAGER=/usr/bin/moar
 
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
